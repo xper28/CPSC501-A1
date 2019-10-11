@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Department {
     String name;
-    Manager manager;
+    Employee manager;
     int budget;
     ArrayList<Employee> staff = new ArrayList<>();
 
@@ -12,8 +12,14 @@ public class Department {
         this.name = name;
     }
 
-    public void setManager(Manager manager){
+    public void setManager(Salaried manager){
         this.manager = manager;
+        manager.manager = true;
+    }
+
+    public void setManager(Hourly manager){
+        this.manager = manager;
+        manager.manager = true;
     }
 
     public void setBudget(int budget) {

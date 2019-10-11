@@ -1,8 +1,11 @@
 package com.company;
 
+import com.company.Employee;
+
 public class Hourly extends Employee {
 
     double rate, hours, overtime;
+    boolean manager = false;
 
     public Hourly(String fname, String lName, String title, int id, double rate){
         super(fname, lName, title, id);

@@ -1,8 +1,11 @@
 package com.company;
 
+import com.company.Employee;
+
 public class Salaried extends Employee {
 
     int bonus, offDays, days, monthly;
+    Boolean manager = false;
 
     public Salaried(String fname, String lName, String title, int id, int monthly){
         super(fname, lName, title, id);
