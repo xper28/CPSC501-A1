@@ -41,5 +41,4 @@ public class TestBattery {
         double pay = emp.calcPay();
         assertEquals(1425, pay, 0);
     }
-
 }

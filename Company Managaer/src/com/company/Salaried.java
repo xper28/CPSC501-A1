@@ -2,7 +2,7 @@ package com.company;
 
 public class Salaried extends Employee {
 
-    int bonus, offDays, daysWorked, daily;
+    int offDays, daysWorked, daily;
 
     public Salaried(String fname, String lName, String title, int id, int daily){
         super(fname, lName, title, id);
@@ -25,7 +25,4 @@ public class Salaried extends Employee {
         return daily * daysWorked;
     }
 
-    public double calcBonus(double percentage){
-        return daily*percentage;
-    }
 }
