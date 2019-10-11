@@ -33,7 +33,7 @@ public class TestBattery {
     }
 
     @org.junit.Test
-    //Testing Salaried employee functionality
+    //Testing Hourly employee functionality
     public void testHourlyEmployee() {
         Hourly emp = new Hourly("Jane", "Doe", "HR recruiter", 1, 30);
         emp.hoursWorked(40, false);
@@ -41,4 +41,5 @@ public class TestBattery {
         double pay = emp.calcPay();
         assertEquals(1425, pay, 0);
     }
+
 }
