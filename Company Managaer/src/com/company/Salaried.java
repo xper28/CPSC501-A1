@@ -1,33 +1,31 @@
 package com.company;
 
-import com.company.Employee;
-
 public class Salaried extends Employee {
 
-    int bonus, offDays, days, monthly;
+    int bonus, offDays, daysWorked, daily;
 
-    public Salaried(String fname, String lName, String title, int id, int monthly){
+    public Salaried(String fname, String lName, String title, int id, int daily){
         super(fname, lName, title, id);
-        this.monthly = monthly;
+        this.daily = daily;
     }
 
-    public void worked(int daysMissed){
+    public void calcDaysWorked(int daysMissed){
         int loss = 0;
         if(daysMissed>offDays) {
             loss = offDays - daysMissed;
         }
-        days = 30 + loss;
+        daysWorked = 30 + loss;
     }
 
     @Override
     public double calcPay() {
-        if(days == 0){
+        if(daysWorked == 0){
             System.out.println("Employee has not worked this month!");
         }
-        return monthly * days;
+        return daily * daysWorked;
     }
 
     public double calcBonus(double percentage){
-        return monthly*percentage;
+        return daily*percentage;
     }
 }

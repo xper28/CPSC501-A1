@@ -8,9 +8,9 @@ public class Main {
 	public static void main(String[]  args) {
 		Scanner kbd = new Scanner(System.in);
 		//Database replacement
-		ArrayList<Department> dep = new ArrayList<>();
+		ArrayList<Department> departments = new ArrayList<>();
 		ArrayList<Salaried> salaried = new ArrayList<>();
-		ArrayList<Hourly> hourly = new ArrayList<>();
+		ArrayList<Hourly> hourlies = new ArrayList<>();
 		System.out.println("Welcome to Company Manager\n choose option to continue" );
 		while(true){
 			mainMenu();
@@ -18,11 +18,11 @@ public class Main {
 			if(temp == 1){
 				salariedPrompt(kbd, salaried);
 			}else if(temp == 2){
-				hourlyPrompt(kbd, hourly);
+				hourlyPrompt(kbd, hourlies);
 			}else if(temp == 3){
-				deptPrompt(kbd, dep);
+				deptPrompt(kbd, departments);
 			}else if(temp == 4){
-				showDepts(dep);
+				showDepts(departments);
 			}else if(temp == 0){
 				break;
 			}
@@ -43,7 +43,7 @@ public class Main {
 		String lname = kbd.next();
 		System.out.println("Enter title");
 		String title = kbd.next();
-		System.out.println("Enter monthly salary");
+		System.out.println("Enter daily salary");
 		int monthly = kbd.nextInt();
 		System.out.println("Enter id number");
 		int id = kbd.nextInt();

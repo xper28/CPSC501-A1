@@ -11,11 +11,12 @@ public class Hourly extends Employee {
         this.rate = rate;
     }
 
-    public void hours(double hours, boolean over){
+    public void hoursWorked(double hours, boolean over){
         if(over){
             this.overtime += hours;
+        }else {
+            this.hours += hours;
         }
-        this.hours += hours;
     }
 
     @Override
