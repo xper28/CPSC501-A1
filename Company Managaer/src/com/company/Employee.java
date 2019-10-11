@@ -4,6 +4,7 @@ public abstract class Employee {
 
     String fName, lName, title;
     int id;
+    boolean manager;
 
     public Employee(){
 

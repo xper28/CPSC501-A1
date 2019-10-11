@@ -12,12 +12,7 @@ public class Department {
         this.name = name;
     }
 
-    public void setManager(Salaried manager){
-        this.manager = manager;
-        manager.manager = true;
-    }
-
-    public void setManager(Hourly manager){
+    public void setManager(Employee manager){
         this.manager = manager;
         manager.manager = true;
     }
